@@ -13,12 +13,9 @@ pg.run()
 
 custom_css = """
     <style>
-    /* Modifier l'arrière-plan de la page principale avec un dégradé */
     .stApp {
         background: linear-gradient(to bottom, rgba(13, 52, 4, 0.8), rgba(0, 0, 0, 0.8)) !important;
     }
-
-    /* Modifier l'arrière-plan du volet de navigation (sidebar) avec un dégradé */
     section[data-testid="stSidebar"] {
         background: linear-gradient(to bottom, #FFFFFF, #333333) !important;
     }
