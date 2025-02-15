@@ -20,7 +20,7 @@ custom_css = """
 
     /* Modifier l'arrière-plan du volet de navigation (sidebar) avec un dégradé */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(to bottom, #666866, #333333) !important;
+        background: linear-gradient(to bottom, #FFFFFF, #333333) !important;
     }
     </style>
 """
