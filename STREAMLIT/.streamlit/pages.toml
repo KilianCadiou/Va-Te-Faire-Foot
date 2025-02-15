@@ -1,14 +1,14 @@
 [[pages]]
-path = "/Users/kilian/Documents/GitHub/Projet-3/STREAMLIT/pages/0 - accueil.py"
+path = "/Users/kilian/Documents/GitHub/Va-Te-Faire-Foot/STREAMLIT/pages/0 - accueil.py"
 name = "Accueil"
 icon = "⚽"
 
 [[pages]]
-path = "/Users/kilian/Documents/GitHub/Projet-3/STREAMLIT/pages/1 - similarite.py"
+path = "/Users/kilian/Documents/GitHub/Va-Te-Faire-Foot/STREAMLIT/pages/1 - similarite.py"
 name = "Recherche d'un joueur similaire"
 icon = "👬🏻"
 
 [[pages]]
-path = "/Users/kilian/Documents/GitHub/Projet-3/STREAMLIT/pages/2 - ideal.py"
+path = "/Users/kilian/Documents/GitHub/Va-Te-Faire-Foot/STREAMLIT/pages/2 - ideal.py"
 name = "Trouver le joueur idéal"
 icon = "🔎"

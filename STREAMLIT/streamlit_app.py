@@ -5,7 +5,7 @@ import time
 
 nav = get_nav_from_toml("STREAMLIT/.streamlit/pages.toml")
 
-st.logo("STREAMLIT/img/Bandeau.png", size = 'large')
+st.logo("https://raw.githubusercontent.com/KilianCadiou/Va-Te-Faire-Foot/main/STREAMLIT/img/Bandeau.png", size = 'large')
 
 pg = st.navigation(nav)
 
@@ -25,5 +25,4 @@ custom_css = """
     </style>
 """
 
-import streamlit as st
 st.markdown(custom_css, unsafe_allow_html=True)
