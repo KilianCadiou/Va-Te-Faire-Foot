@@ -5,7 +5,7 @@ import time
 
 nav = get_nav_from_toml("STREAMLIT/.streamlit/pages.toml")
 
-st.logo("https://raw.githubusercontent.com/KilianCadiou/Bis/main/STREAMLIT/img/Bandeau.png", size = 'large')
+st.logo("STREAMLIT/img/Bandeau.png", size = 'large')
 
 pg = st.navigation(nav)
 

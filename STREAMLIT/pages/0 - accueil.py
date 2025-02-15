@@ -37,12 +37,6 @@ custom_css = """
 
 st.markdown(custom_css, unsafe_allow_html=True)
 
-# st.markdown(
-#     "<h1 style='text-align: center; color: white;'>Va te faire foot !</h1>",
-#     unsafe_allow_html=True
-# )
-
-
 st.markdown(
     "<h3 style='text-align: center; color: white;'>Bienvenue sur notre service de recommandations de joueurs de football.</h3>",
     unsafe_allow_html=True
@@ -54,15 +48,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# st.header("Va te faire foot !")
-# st.html("<p>Bienvenue sur notre service de recommandations de joueurs de football.</p>")
-
-# st.image("STREAMLIT/img/sticker-footballeur-pop-art-ambiance-sticker-col-SAND_A131.png", width=500)
 
 st.markdown(
     """
     <div style="text-align: center;">
-        <img src="STREAMLIT/img/file-AfJoGfAn6WiPywEs5Y4Mb2.png" width="500">
+        <img src="STREAMLIT/img/file-AfJoGfAn6WiPywEs5Y4Mb22.png" width="500">
     </div>
     """,
     unsafe_allow_html=True

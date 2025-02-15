@@ -22,7 +22,7 @@ import seaborn as sns
 
 # BASE
 
-df = pd.read_csv('STREAMLIT/BD/dataset_a_jour.csv')
+df = pd.read_csv('/Users/kilian/Documents/GitHub/Va-Te-Faire-Foot/BD/dataset_a_jour.csv')
 df = df.drop_duplicates(subset='ID', keep = 'first')
 df = df[(df['name'].isna() == False) | (df['name'] == 'Pas encore fait')]
 df['name'] = df['name'].astype(str)
