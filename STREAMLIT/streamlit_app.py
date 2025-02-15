@@ -17,7 +17,7 @@ custom_css = """
         background: linear-gradient(to bottom, rgba(13, 52, 4, 0.8), rgba(0, 0, 0, 0.8)) !important;
     }
     section[data-testid="stSidebar"] {
-        background: linear-gradient(to bottom, #FFFFFF, #333333) !important;
+        background: linear-gradient(to bottom, #FFFFFF, #FFFFFF) !important;
     }
     </style>
 """
