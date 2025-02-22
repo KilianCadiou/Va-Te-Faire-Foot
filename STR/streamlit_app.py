@@ -18,6 +18,16 @@ custom_css = """
     </style>
 """
 
+import toml
+
+# Charger et inspecter le fichier TOML
+config = toml.load("STR/.streamlit/pages.toml")
+print(config)  # Vérifie que les pages sont correctement chargées
+
+# Ensuite, charge la navigation
+nav = get_nav_from_toml("STR/.streamlit/pages.toml")
+
+
 st.markdown(custom_css, unsafe_allow_html=True)
 
 nav = get_nav_from_toml("./STR/.streamlit/pages.toml")
