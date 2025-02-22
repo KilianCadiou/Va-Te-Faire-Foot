@@ -20,7 +20,7 @@ custom_css = """
 
 st.markdown(custom_css, unsafe_allow_html=True)
 
-nav = get_nav_from_toml("STR/.streamlit/pages.toml")
+nav = get_nav_from_toml("./STR/.streamlit/pages.toml")
 
 pg = st.navigation(nav)
 
