@@ -2,7 +2,7 @@ import streamlit as st
 from st_pages import get_nav_from_toml
 
 
-st.logo("https://raw.githubusercontent.com/KilianCadiou/Va-Te-Faire-Foot/main/STR/img/Bandeau.png", size = 'large')
+st.logo("https://raw.githubusercontent.com/KilianCadiou/Va-Te-Faire-Foot/main/STREAMLIT/img/Bandeau.png", size = 'large')
 
 custom_css = """
     <style>
