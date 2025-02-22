@@ -1,17 +1,8 @@
 import streamlit as st
 from st_pages import get_nav_from_toml
 
-nav = {
-    "Page 1": "STR/pages/0_accueil.py",
-    "Page 2": "STR/pages/2_ideal.py",
-    "Page 3": "STR/pages/1_similarite.py"
-}
 
 st.logo("https://raw.githubusercontent.com/KilianCadiou/Va-Te-Faire-Foot/main/STREAMLIT/img/Bandeau.png", size = 'large')
-
-pg = st.navigation(nav)
-
-pg.run()
 
 custom_css = """
     <style>
@@ -28,3 +19,11 @@ custom_css = """
 """
 
 st.markdown(custom_css, unsafe_allow_html=True)
+
+nav = get_nav_from_toml("STR/.streamlit/pages.toml")
+
+pg = st.navigation(nav)
+
+pg.run()
+
+
