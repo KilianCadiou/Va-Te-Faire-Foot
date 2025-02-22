@@ -1,7 +1,11 @@
 import streamlit as st
 from st_pages import get_nav_from_toml
 
-nav = get_nav_from_toml("STR/.streamlit/pages.toml")
+nav = {
+    "Page 1": "STR/pages/0_accueil.py",
+    "Page 2": "STR/pages/2_ideal.py",
+    "Page 3": "STR/pages/1_similarite.py"
+}
 
 st.logo("https://raw.githubusercontent.com/KilianCadiou/Va-Te-Faire-Foot/main/STREAMLIT/img/Bandeau.png", size = 'large')
 
