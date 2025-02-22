@@ -1,15 +1,15 @@
 [[pages]]
-path = "STR/pages/0_accueil.py"
+path = "pages/0_accueil.py"
 name = "Accueil"
 icon = "⚽"
 
 [[pages]]
-path = "STR/pages/2_ideal.py"
+path = "pages/2_ideal.py"
 name = "Trouver le joueur idéal"
 icon = "🔎"
 
 [[pages]]
-path = "STR/pages/1_similarite.py"
+path = "pages/1_similarite.py"
 name = "Recherche d'un joueur similaire"
 icon = "👬🏻"
 
