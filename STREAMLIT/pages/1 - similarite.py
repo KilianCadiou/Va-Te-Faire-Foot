@@ -409,8 +409,8 @@ if choix_joueur:
         if id_joueur not in X['ID'].values:
             df_id_joueur = df[df['ID'] == id_joueur]
 
-        X = pd.concat([X, df_id_joueur])
-        df_recherche = pd.concat([df_recherche, df_id_joueur])
+            X = pd.concat([X, df_id_joueur])
+            df_recherche = pd.concat([df_recherche, df_id_joueur])
     
         
         X_encoded, SN = encodage_X(X, 'standard', colonnes_fixes, poids_fixes_dict)

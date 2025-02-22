@@ -38,8 +38,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-<<<<<<< HEAD
-=======
 st.markdown(
     "<h5 style='text-align: center; color: white;'>📢 Hymne du FC Va te faire foot 🎶 </h5>",
     unsafe_allow_html=True
@@ -52,8 +50,6 @@ st.markdown("""
         .page-break { page-break-before: always; }
     </style>
 """, unsafe_allow_html=True)
-
->>>>>>> ee916e39d74daf10faf87eff91f185fba6467605
 
 st.markdown(
     """
