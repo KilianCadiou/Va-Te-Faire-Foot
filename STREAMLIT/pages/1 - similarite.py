@@ -28,7 +28,7 @@ df = df[(df['name'].isna() == False) | (df['name'] == 'Pas encore fait')]
 df['name'] = df['name'].astype(str)
 df['name'] = df['name'].apply(lambda x : x.split(',') if ',' in x else x)
 df['Team & Contract'] = df['Team & Contract'].apply(lambda x : int(x) if x != 'Unknown' else 0)
-# df = df[(df['Team & Contract'] == 0) | (df['Team & Contract'] >= 2024)]
+# df = df[(df['Team & Contract'] == 0) | (df['Team & Contract'] <= 2024)]
 df['Nom_annee'] = df.apply(lambda x : x['name'][0] + ' (' + str(2025 - x['Age']) + ')' , axis = 1)
 
 df = df[~(df['name'].isna() == True)]
@@ -200,6 +200,7 @@ def encodage_X(X, type, colonnes_fixes, poids_fixes_dict):
 def joueurs_similaires(X_encoded, id_joueur, model, df_recherche):
 
   df_recherche['ID'] = df_recherche['ID'].astype(str)
+
   id_joueur = str(id_joueur)
   if id_joueur not in df_recherche['ID'].values:
       return f"Le Pokémon {id_joueur} n'est pas dans le dataset."
@@ -403,6 +404,15 @@ if choix_joueur:
         X = df_recherche.copy()
         
         X['ID'] = X['ID'].astype(str)
+        df['ID'] = df['ID'].astype(str)
+
+        if id_joueur not in X['ID'].values:
+            df_id_joueur = df[df['ID'] == id_joueur]
+
+        X = pd.concat([X, df_id_joueur])
+        df_recherche = pd.concat([df_recherche, df_id_joueur])
+    
+        
         X_encoded, SN = encodage_X(X, 'standard', colonnes_fixes, poids_fixes_dict)
         
         k=8
