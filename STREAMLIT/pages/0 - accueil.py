@@ -1,15 +1,23 @@
+import pandas as pd
 import streamlit as st
-import streamlit_authenticator as stauth
-from streamlit_option_menu import option_menu
+import ast
+from bs4 import BeautifulSoup
+import pickle
+import requests
+import re
+import plotly.express as px
+import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=FutureWarning)
+from rapidfuzz import fuzz
+from rapidfuzz import process
+import numpy as np
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 import seaborn as sns
-import streamlit.components.v1 as components
-
+import os
 
 custom_css = """
     <style>
@@ -38,18 +46,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown(
-    "<h5 style='text-align: center; color: white;'>📢 Hymne du FC Va te faire foot 🎶 </h5>",
-    unsafe_allow_html=True
-)
-
-st.audio("Allez tourner terrain.mp3")
-
-st.markdown("""
-    <style>
-        .page-break { page-break-before: always; }
-    </style>
-""", unsafe_allow_html=True)
 
 st.markdown(
     """

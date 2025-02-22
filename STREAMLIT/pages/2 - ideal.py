@@ -1,7 +1,5 @@
 import pandas as pd
 import streamlit as st
-import streamlit_authenticator as stauth
-from streamlit_option_menu import option_menu
 import ast
 from bs4 import BeautifulSoup
 import pickle
