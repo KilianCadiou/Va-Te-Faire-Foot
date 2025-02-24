@@ -50,7 +50,7 @@ st.markdown(
     "<h4 style='text-align: center; color: white;'>📢 L'hyme de notre équipe !</h4>",
     unsafe_allow_html=True
 )
-st.audio('Allez tourner terrain.mp3')
+st.audio('STR/Allez tourner terrain.mp3')
 
 st.markdown(
     """
