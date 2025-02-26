@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/KilianCadiou/Va-Te-Faire-Foot/ef8ff1a4f435e6c2b3baca0a4b87c7344fcba5ed/STR/img/Bandeau.png" 
-       alt="bannière" style="width: 70%; max-width: 800px;">
+       alt="bannière" style="width: 90%; max-width: 800px;">
 </p>
 
 
