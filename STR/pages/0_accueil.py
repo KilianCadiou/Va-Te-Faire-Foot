@@ -91,7 +91,7 @@ with col1:
     """,
     unsafe_allow_html=True
 )
-    /Users/kilian/Documents/GitHub/Va-Te-Faire-Foot/STR/img/pandas_white.png
+
 with col2:
     st.markdown(
     """
