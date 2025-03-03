@@ -178,7 +178,6 @@ def encodage_X(X, type, colonnes_fixes, poids_fixes_dict):
    
     X_num_scaled = pd.DataFrame(SN.fit_transform(X_num), columns=X_num.columns, index=index)
 
-
     X_encoded = pd.concat([X_str[['name', 'ID']], poids_numerique(X_num_scaled, colonnes_fixes, poids_fixes_dict)], axis=1)
     X_encoded = X_encoded.dropna()
 
@@ -257,8 +256,8 @@ if choix_joueur:
 
     poids_fixes_dict = {
                         'Age': 1,  
-                        'Overall rating': 1,  
-                        'Potential': 1,  
+                        'Overall rating': 10,  
+                        'Potential': 2,  
                         'Heading accuracy': 1, 
                         'Curve': 1,  
                         'Acceleration': 1, 
@@ -274,8 +273,8 @@ if choix_joueur:
                         'Defending / Pace': 1,
                         'Height': 1,
                         'Weight': 1,
-                        'Value': 1,
-                        'Wage': 1,
+                        'Value': 2,
+                        'Wage': 2,
                         'Release clause': 1,
                         'Crossing': 1,
                         'Short passing': 1,
@@ -392,12 +391,20 @@ if choix_joueur:
 
         X = df_recherche.copy()
         
+        if len(critere) > 0:
+            for element in critere:
+                poids_fixes_dict.update({element : 2})
+
         X['ID'] = X['ID'].astype(str)
+
         X_encoded, SN = encodage_X(X, 'standard', colonnes_fixes, poids_fixes_dict)
         
         k=8
+
         model = NearestNeighbors(n_neighbors=k, metric='euclidean')
+
         model.fit(X_encoded.select_dtypes(include=['number']))
+
         resultat = joueurs_similaires(X_encoded, id_joueur, model, df_recherche)
   
         resultat = resultat.sort_values(by = 'Overall rating', ascending = False)
